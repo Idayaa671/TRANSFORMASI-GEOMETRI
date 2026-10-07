@@ -1,0 +1,29 @@
+:root{--ink:#14213d;--soga:#8a5a2b;--gading:#f6efdd;--daun:#2f7d57;--gold:#e0b85a;--bata:#b5532e;--line:#d9ccb0}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 Figtree,system-ui,sans-serif;color:#1c2233;background:#fbf8f0}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.2}
+.hero{background-color:var(--ink);background-image:radial-gradient(circle at 0 0,transparent 15px,#e0b85a40 16px 18px,transparent 19px),radial-gradient(circle at 100% 100%,transparent 15px,#e0b85a40 16px 18px,transparent 19px);background-size:40px 40px;color:#fff;padding:36px 20px 30px;text-align:center}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);margin:0 0 8px;color:var(--gold)}.hero p{max-width:60ch;margin:0 auto;color:#e9e4d6}
+#nav{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+#nav button{flex:none;border:1px solid var(--line);background:var(--gading);border-radius:20px;padding:6px 12px;font:600 .85rem Figtree,sans-serif;cursor:pointer;color:var(--soga)}
+#nav button.done{background:#dcefe3;border-color:var(--daun);color:var(--daun)}#nav button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+main{display:grid;grid-template-columns:minmax(300px,440px) 1fr;gap:22px;max-width:1280px;margin:0 auto;padding:22px 16px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}.st{display:none}.st.on{display:block}
+.panel h2{margin:0 0 10px;color:var(--ink);font-size:1.5rem}.panel h3{margin:18px 0 6px}
+label{display:block;font-weight:600;font-size:.88rem;margin:10px 0;color:var(--soga)}label>input,label>select,label>textarea{display:block;width:100%;margin-top:4px;font:400 1rem Figtree,sans-serif;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:#fff}
+input[type=color]{padding:2px;height:36px}input[type=range]{padding:0}.row{display:flex;gap:10px}.row>label{flex:1}
+button{font-family:inherit}.go,footer button{background:var(--daun);color:#fff;border:0;border-radius:8px;padding:9px 16px;font-weight:700;cursor:pointer;margin:8px 8px 8px 0}
+.go:hover,footer button:hover{background:#256345}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.rule,.note{background:var(--gading);border-left:4px solid var(--gold);padding:8px 12px;border-radius:6px;font-size:.9rem;margin:10px 0}.note:empty{display:none}
+.pl{padding-left:20px}.pl li{background:var(--gading);border-radius:8px;padding:6px 8px;margin:5px 0;font-size:.9rem}.pl button{border:1px solid var(--line);background:#fff;border-radius:6px;margin-left:3px;cursor:pointer}
+table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:left}td input{width:100%;padding:3px 5px;border:1px solid var(--line);border-radius:6px}
+.stage{position:sticky;top:60px;align-self:start}.tabs button{border:0;padding:8px 16px;background:var(--gading);border-radius:10px 10px 0 0;font-weight:700;cursor:pointer;color:var(--soga)}.tabs button.on{background:var(--ink);color:#fff}
+canvas{width:100%;height:auto;background:#fff;border:2px solid var(--ink);border-radius:0 12px 12px 12px;touch-action:none}
+.met{display:grid;grid-template-columns:1fr 1fr;gap:8px}.met div{background:var(--gading);border-radius:8px;padding:8px 10px;font-size:.85rem}.met b{display:block;font:400 1.4rem "Young Serif",serif;color:var(--ink)}
+.badge{display:inline-block;margin:4px 6px 0 0;padding:4px 10px;border-radius:16px;background:#e8e2d0;color:#6b6652;font-weight:700;font-size:.85rem}.badge.on{background:var(--gold);color:var(--ink)}
+pre{white-space:pre-wrap;background:var(--ink);color:#f3ecd8;padding:12px;border-radius:10px;font-size:.85rem}
+footer{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:6px 16px}
+@media(max-width:900px){main{grid-template-columns:1fr}.stage{position:static;order:-1}}
+@media print{#nav,footer,.tabs,.panel>.st:not([data-s="10"]),.go{display:none}main{display:block}.panel{border:0}.stage{position:static}canvas{display:block!important}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none}}
+.credit{position:fixed;right:14px;bottom:62px;margin:0;padding:4px 12px;background:var(--ink);color:var(--gold);border-radius:14px;font-size:.8rem;font-weight:600;z-index:6;box-shadow:0 2px 6px #0003}
+@media print{.credit{position:static;background:none;color:#000;box-shadow:none;text-align:right}}

@@ -1,0 +1,42 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rancang Motif Batikku</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Young+Serif&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
+<header class="hero"><h1>Rancang Motif Batikku</h1><p>Proyek Bab 9: ciptakan pola dari translasi, refleksi, rotasi, dan dilatasi, terinspirasi batik Bojonegoro.</p></header>
+<nav id="nav" aria-label="Langkah proyek"></nav>
+<main>
+<section class="panel">
+<div class="st" data-s="1"><h2>9.1 Mengenal Tantangan Proyek</h2>
+<p>Misimu: ciptakan motif dari <b>satu bentuk dasar</b>, gunakan <b>minimal dua jenis transformasi</b>, tata menjadi pola di atas kain, lalu buktikan dengan angka bahwa rancanganmu cermat dan hemat bahan.</p>
+<ul><li>Bentuk dasar dan koordinatnya jelas</li><li>Resep transformasi benar dan berurutan</li><li>Terhubung dengan budaya Bojonegoro</li><li>Sisa kain kecil, pewarna tidak berlebihan</li><li>Dipresentasikan dengan alasan yang masuk akal</li></ul>
+<button class="go" data-go="2">Mulai merancang</button></div>
+<div class="st" data-s="2"><h2>9.2 Menentukan Bentuk Dasar</h2><p>Pilih satu bentuk dasar. Bentuk ini akan digeser, dicerminkan, diputar, dan diubah ukurannya.</p>
+<label>Bentuk<select id="shape"><option value="daun">Daun jati</option><option value="kelopak">Kelopak</option><option value="ketupat">Belah ketupat</option><option value="tumpal">Tumpal (segitiga)</option><option value="gapura">Gapura</option><option value="kentongan">Kentongan</option><option value="api">Api</option></select></label>
+<label>Ukuran: <output id="so">1</output><input id="size" type="range" min=".5" max="2" step=".1" value="1"></label>
+<div class="row"><label>Posisi x<input id="x0" type="number" value="0" step=".5"></label><label>Posisi y<input id="y0" type="number" value="0" step=".5"></label></div>
+<div class="row"><label>Warna dasar<input id="c1" type="color" value="#2f7d57"></label><label>Warna aksen<input id="c2" type="color" value="#b5532e"></label><label>Warna kain<input id="bg" type="color" value="#f6efdd"></label></div></div>
+<div class="st" data-s="3"><h2>9.3 Menentukan Koordinat</h2><p>Setiap titik sudut punya koordinat (x, y). Seret titik pada kanvas atau ubah angkanya untuk membentuk bentuk sendiri.</p>
+<table id="vt"><thead><tr><th>Titik</th><th>x</th><th>y</th></tr></thead><tbody></tbody></table></div>
+<div class="st" data-s="4"><h2>9.4 Memilih Transformasi</h2><p>Pilih transformasi, atur nilainya, lalu tambahkan. Setiap langkah dikerjakan pada hasil langkah sebelumnya.</p>
+<label>Jenis<select id="tt"><option value="T">Translasi (pergeseran)</option><option value="R">Refleksi (pencerminan)</option><option value="O">Rotasi (perputaran)</option><option value="D">Dilatasi (skala)</option></select></label>
+<label id="rkl">Cermin<select id="rk"><option value="x">sumbu x</option><option value="y">sumbu y</option><option value="d">garis y = x</option><option value="e">garis y = −x</option><option value="h">garis x = h</option><option value="v">garis y = k</option></select></label>
+<div class="row"><label><span id="l0">a</span><input id="p0" type="number" step=".5"></label><label><span id="l1">b</span><input id="p1" type="number" step=".5"></label><label><span id="l2">c</span><input id="p2" type="number" step=".5"></label></div>
+<label>Ulangi (kali)<input id="rep" type="number" min="1" max="12" value="1"></label><p id="rule" class="rule"></p><button id="add" class="go">Tambah ke resep</button><ol class="pl" id="pl"></ol></div>
+<div class="st" data-s="5"><h2>9.5 Membentuk Pola</h2><p>Tata motifmu menjadi pola di atas kain (lihat tab Kain).</p>
+<label>Tata letak<select id="lay"><option value="grid">Barisan sejajar (translasi)</option><option value="bata">Selang-seling (geser setengah)</option><option value="cermin">Cermin bergantian (refleksi)</option></select></label>
+<div class="row"><label>Kain lebar (cm)<input id="cw" type="number" value="120"></label><label>tinggi (cm)<input id="chh" type="number" value="80"></label></div>
+<div class="row"><label>1 satuan = (cm)<input id="cmu" type="number" value="5" step=".5"></label><label>Jarak antarmotif (satuan)<input id="gap" type="number" value=".4" step=".1" min="0"></label></div></div>
+<div class="st" data-s="6"><h2>9.6 Menggabungkan Transformasi</h2><p>Urutan bisa mengubah hasil. Ubah urutan dengan tombol panah, lalu uji: apakah menukar dua langkah terakhir mengubah rancanganmu?</p><ol class="pl" id="pl2"></ol><button id="swap" class="go">Tukar dua langkah terakhir</button><p id="swapout" class="note"></p></div>
+<div class="st" data-s="7"><h2>9.7 Menganalisis Hasil Rancangan</h2><div id="an"></div></div>
+<div class="st" data-s="8"><h2>9.8 Mengaitkan dengan Budaya</h2><p>Pilih inspirasi dari motif Bojonegoro. Contoh ini hanyalah tafsir geometris sederhana, bukan salinan motif resmi. Buat versimu sendiri dan sebutkan sumber inspirasinya.</p>
+<label>Inspirasi<select id="insp"></select></label><p id="inspd" class="note"></p><button id="load" class="go">Muat resep contoh</button>
+<label>Nama motifmu<input id="nama" type="text" placeholder="mis. Sekar Jati Berjenjang"></label><label>Makna atau cerita motifmu<textarea id="makna" rows="3" placeholder="Mengapa bentuk dan transformasi ini kamu pilih?"></textarea></label></div>
+<div class="st" data-s="9"><h2>9.9 Mempertimbangkan Aspek Lingkungan</h2><p>Bahan yang dipakai berkaitan dengan luas motif. Angka berikut menguji seberapa cermat rancanganmu.</p><div id="li"></div></div>
+<div class="st" data-s="10"><h2>9.10 Mempresentasikan Hasil</h2><p>Simpan karyamu, salin resepnya, lalu jelaskan alasan setiap keputusan.</p>
+<div class="row"><button id="png" class="go">Unduh gambar kain</button><button id="copy" class="go">Salin resep</button><button id="prn" class="go">Cetak</button></div><pre id="resep"></pre>
+<h3>Penilaian diri</h3><div id="rub"></div><p id="rubo" class="note"></p></div>
+</section>
+<section class="stage"><div class="tabs"><button id="t1" class="on">Bidang koordinat</button><button id="t2">Kain</button></div>
+<canvas id="cv" width="560" height="420" aria-label="Bidang koordinat"></canvas><canvas id="fab" width="560" height="420" aria-label="Pola kain" hidden></canvas><p id="read" class="note"></p></section>
+</main>
+<footer><button id="prev">Sebelumnya</button><span id="pos"></span><button id="next">Berikutnya</button></footer>
+<p class="credit">Dibuat oleh Ida Yanti</p>
+<script src="script.js"></script></body></html>
